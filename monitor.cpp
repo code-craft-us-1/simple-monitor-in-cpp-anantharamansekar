@@ -19,18 +19,56 @@ void PrintError(std::string errString)
     }
 }
 
-int vitalsOk(float temperature, float pulseRate, float spo2) {
+int CheckTemperature(float temperature)
+{
+	int result = 1;
+
 	if (temperature > 102 || temperature < 95) {
 		PrintError("Temperature is critical!");
-		return 0;
+		result = 0;
 	}
-	else if (pulseRate < 60 || pulseRate > 100) {
+
+	return result;
+}
+
+int CheckPulse(float pulseRate)
+{
+	int result = 1;
+
+	if (pulseRate < 60 || pulseRate > 100) {
 		PrintError("Pulse Rate is out of range!");
-		return 0;
+		result = 0;
 	}
-	else if (spo2 < 90) {
+
+	return result;
+}
+
+int CheckSPO2(float spo2)
+{
+	int result = 1;
+
+	if (spo2 < 90) {
 		PrintError("Oxygen Saturation out of range!");
-		return 0;
+		result = 0;
 	}
-  return 1;
+
+	return result;
+}
+
+int vitalsOk(float temperature, float pulseRate, float spo2) {
+	int result = 1;
+
+	result = CheckTemperature(temperature);
+
+	if (result)
+	{
+		result = CheckPulse(pulseRate);
+	}
+
+	if (result)
+	{
+		result = CheckSPO2(spo2);
+	}
+	
+  return result;
 }
