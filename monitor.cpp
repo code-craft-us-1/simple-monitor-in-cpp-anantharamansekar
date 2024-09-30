@@ -56,11 +56,11 @@ int vitalsOk(float temperature, float pulseRate, float spo2) {
 
     result = CheckTemperature(temperature);
 
-    if (result){
+    if (result) {
         result = CheckPulse(pulseRate);
     }
 
-    if (result){
+    if (result) {
         result = CheckSPO2(spo2);
     }
 
