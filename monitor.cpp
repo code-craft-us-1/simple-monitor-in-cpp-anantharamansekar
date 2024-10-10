@@ -6,8 +6,12 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-using namespace chrono;
+using std::cout;
+using std::endl;
+using std::flush;
+using std::string;
+using std::this_thread::sleep_for;
+using std::chrono::seconds;
 
 // Function: PrintError
 // Description: This function prints an error message to the console and creates a blinking effect
@@ -21,9 +25,9 @@ void PrintError(const string& errorMessage) {
     cout << errorMessage << endl;
     for (int blinkCount = 0; blinkCount < 6; ++blinkCount) {
         cout << "\r* " << flush;
-        this_thread::sleep_for(seconds(1));
+        sleep_for(seconds(1));
         cout << "\r *" << flush;
-        this_thread::sleep_for(seconds(1));
+        sleep_for(seconds(1));
     }
 }
 
