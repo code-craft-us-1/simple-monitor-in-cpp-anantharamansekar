@@ -1,1 +1,0 @@
-D:\views\CPP\simple-monitor-in-cpp-anantharamansekar\ReduceComplexityTest\ReduceComplexityTest\x64\Debug\ReduceComplexityTest.vcxproj.CopyComplete

@@ -1,5 +1,0 @@
-﻿  monitor.cpp
-  test-monitor.cpp
-D:\views\CPP\simple-monitor-in-cpp-anantharamansekar\test-monitor.cpp(7,3): warning C4305: 'argument': truncation from 'double' to 'float'
-  Generating Code...
-  ReduceComplexityTest.vcxproj -> D:\views\CPP\simple-monitor-in-cpp-anantharamansekar\ReduceComplexityTest\Debug\ReduceComplexityTest.exe
